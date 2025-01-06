@@ -3,11 +3,11 @@ plugins {
 }
 
 android {
-    namespace 'mxg.frameworkhelper.overlay'
+    namespace 'mxg.chargehelper.overlay'
     compileSdk 34
 
     defaultConfig {
-        applicationId "mxg.frameworkhelper.overlay"
+        applicationId "mxg.chargehelper.overlay"
         minSdk 33
         targetSdk 34
         versionCode 1

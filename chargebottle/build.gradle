@@ -3,11 +3,11 @@ plugins {
 }
 
 android {
-    namespace 'mxg.sysuihelper.overlay'
+    namespace 'mxg.chargehelper.overlay'
     compileSdk 34
 
     defaultConfig {
-        applicationId "mxg.sysuihelper.overlay"
+        applicationId "mxg.chargehelper.overlay"
         minSdk 33
         targetSdk 34
         versionCode 1

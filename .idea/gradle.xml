@@ -10,6 +10,9 @@
         <option name="modules">
           <set>
             <option value="$PROJECT_DIR$" />
+            <option value="$PROJECT_DIR$/chargebottle" />
+            <option value="$PROJECT_DIR$/chargeglow" />
+            <option value="$PROJECT_DIR$/chargeparticle" />
             <option value="$PROJECT_DIR$/framework" />
             <option value="$PROJECT_DIR$/sysui" />
           </set>
