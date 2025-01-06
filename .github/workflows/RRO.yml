@@ -9,7 +9,7 @@ on:
 
 jobs:
   build:
-    if: "contains(github.event.head_commit.message, '[CI]')"  # Check condition early
+    if: "!contains(github.event.head_commit.message, '[CI]')"  # Check condition early
     runs-on: ubuntu-latest
     steps:
     - uses: actions/checkout@v4
@@ -25,7 +25,6 @@ jobs:
 
     - name: Grant execute permission for gradlew
       run: chmod +x gradlew
-
     - name: Build with Gradle
       env:
         KEYSTORE_PASSWORD: ${{ secrets.KEYSTORE_PASSWORD }}
@@ -33,7 +32,7 @@ jobs:
         KEY_PASSWORD: ${{ secrets.KEYSTORE_PASSWORD }}
       run : |
           ./gradlew assembleRelease
-          
+
     - name: Build with Gradle
       run : |
           ./gradlew assembleRelease
@@ -42,7 +41,7 @@ jobs:
           cp framework/build/outputs/apk/release/framework-release-unsigned.apk apk_out/MxGFrameworkOverlayHelper.apk
 
     - name: Upload artifacts
-    - uses: actions/upload-artifact@v4
+      uses: actions/upload-artifact@v4
       with:
         name: overlay-artifacts
         path: apk_out/
