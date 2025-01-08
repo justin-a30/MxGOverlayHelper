@@ -38,6 +38,10 @@ android {
         }
     }
 
+    aaptOptions {
+        additionalParameters "--no-resource-deduping", "--no-resource-removal"
+    }
+
     compileOptions {
         sourceCompatibility JavaVersion.VERSION_11
         targetCompatibility JavaVersion.VERSION_11
