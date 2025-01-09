@@ -15,25 +15,10 @@ android {
 
         testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
     }
-    signingConfigs {
-        release {
-            storeFile file("../release_key.jks")
-            storePassword System.getenv("KEYSTORE_PASSWORD")
-            keyAlias System.getenv("KEY_ALIAS")
-            keyPassword System.getenv("KEYSTORE_PASSWORD")
-
-            enableV1Signing = true
-            enableV2Signing = true
-            enableV3Signing = true
-            enableV4Signing = true
-        }
-    }
-
 
     buildTypes {
         release {
             minifyEnabled false
-            signingConfig signingConfigs.release
             proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
             shrinkResources false
             multiDexEnabled false
@@ -41,13 +26,18 @@ android {
         }
     }
 
-    aaptOptions {
-        additionalParameters "--no-resource-deduping", "--no-resource-removal"
-        cruncherEnabled = false
-    }
 
     compileOptions {
         sourceCompatibility JavaVersion.VERSION_11
         targetCompatibility JavaVersion.VERSION_11
+    }
+    packaging {
+        jniLibs {
+            useLegacyPackaging false
+        }
+    }
+    androidResources {
+        additionalParameters.addAll(['--no-resource-removal', '--no-resource-deduping'])
+        cruncherEnabled = false
     }
 }

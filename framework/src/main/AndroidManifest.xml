@@ -3,7 +3,6 @@
     xmlns:tools="http://schemas.android.com/tools">
     <application
         android:hasCode="false"
-        android:extractNativeLibs="false"
         android:label="MxG - Framework Helper Overlay"/>
 
     <overlay android:isStatic="true"
