@@ -33,11 +33,11 @@ jobs:
       run : |
           ./gradlew assembleRelease
           mkdir -p apk_out
-          cp sysui/build/outputs/apk/release/sysui-release.apk apk_out/MxGSystemUIOverlayHelper.apk
-          cp framework/build/outputs/apk/release/framework-release.apk apk_out/MxGFrameworkOverlayHelper.apk
-          cp chargebottle/build/outputs/apk/release/chargebottle-release.apk apk_out/MxGBottleAnimationOverlayHelper.apk
-          cp chargeglow/build/outputs/apk/release/chargeglow-release.apk apk_out/MxGGlowAnimationOverlayHelper.apk
-          cp chargeparticle/build/outputs/apk/release/chargeparticle-release.apk apk_out/MxGParticleAnimationOverlayHelper.apk
+          cp sysui/build/outputs/apk/release/sysui-release-unsigned.apk apk_out/MxGSystemUIOverlayHelper.apk
+          cp framework/build/outputs/apk/release/framework-release-unsigned.apk apk_out/MxGFrameworkOverlayHelper.apk
+          cp chargebottle/build/outputs/apk/release/chargebottle-release-unsigned.apk apk_out/MxGBottleAnimationOverlayHelper.apk
+          cp chargeglow/build/outputs/apk/release/chargeglow-release-unsigned.apk apk_out/MxGGlowAnimationOverlayHelper.apk
+          cp chargeparticle/build/outputs/apk/release/chargeparticle-release-unsigned.apk apk_out/MxGParticleAnimationOverlayHelper.apk
 
     - name: Upload artifacts
       uses: actions/upload-artifact@v4
