@@ -4,12 +4,12 @@ plugins {
 
 android {
     namespace 'mxg.frameworkhelper.overlay'
-    compileSdk 34
+    compileSdk 35
 
     defaultConfig {
         applicationId "mxg.frameworkhelper.overlay"
         minSdk 33
-        targetSdk 34
+        targetSdk 35
         versionCode 1
         versionName "1.0"
 
@@ -35,6 +35,9 @@ android {
             minifyEnabled false
             signingConfig signingConfigs.release
             proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
+            shrinkResources false
+            multiDexEnabled false
+            debuggable false
         }
     }
 

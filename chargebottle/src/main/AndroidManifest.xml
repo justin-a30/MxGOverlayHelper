@@ -4,7 +4,6 @@
     <application
         android:hasCode="false"
         android:extractNativeLibs="false"
-        android:icon="@mipmap/ic_launcher"
         android:label="MxG - Charging Animation Helper Overlay"/>
 
     <overlay android:isStatic="true"
