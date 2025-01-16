@@ -23,5 +23,6 @@ rootProject.name = "MxG - Overlay Helper"
 include ':framework'
 include ':sysui'
 include ':chargebottle'
-include ':chargeparticle'
+include ':chargeripple'
 include ':chargeglow'
+include ':extraoverlay'
